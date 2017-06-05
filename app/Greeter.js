@@ -11,20 +11,25 @@ module.exports = function() {
 
 */
 
-var config = require('./config.json');
+/*var config = require('./config.json');
 
 module.exports = function() {
     var greet = document.createElement('div');
     greet.textContent = config.greetText;
-
-    const s = new Set();
-    var str='';
-    [2, 3, 5, 4, 5, 2,9,45, 2].forEach(x => s.add(x));
-    for (let i of s) {
-        str=str+i;
-    }
-    greet.textContent = str;
-
     return greet;
-};
+};*/
 
+import React, {Component} from 'react'
+import config from './config.json';
+
+class Greeter extends Component{
+    render() {
+        return (
+            <div>
+                {config.greetText}
+            </div>
+        );
+    }
+}
+
+export default Greeter
