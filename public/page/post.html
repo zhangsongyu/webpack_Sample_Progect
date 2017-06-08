@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Webpack Sample Project</title>
+</head>
+<script id="pagetmpl" type="text/x-dot-template">
+    <h2>Here is the page using a header template</h2>
+    {{~it :value:index}}
+    <div>{{=value.title}}-->{{=value.name}}</div>
+    <div></div>
+    {{~}}
+
+</script>
+<body>
+<div id='root'>
+</div>
+
+<div id="content"></div>
+<div id="contentcustom"></div>
+
+
+
+<script src="../bundle.js"></script>
+<!--doT要在前引用-->
+<script src="../util/doT.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var data = [
+            {
+                title: "My title",
+                name: "My name"
+            },
+            {
+                title: "My title1",
+                name: "My name1"
+            },
+            {
+                title: "My title2",
+                name: "My name2"
+            },
+
+        ]
+    ;
+
+    var pagefn = doT.template(document.getElementById('pagetmpl').text);
+    document.getElementById('content').innerHTML = pagefn(data);
+</script>
+
+</body>
+</html>

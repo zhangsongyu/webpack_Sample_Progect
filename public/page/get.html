@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GET</title>
+</head>
+
+<body>
+<div id='root'>
+</div>
+<button onclick="sendGet()">GET</button>
+
+<script src="../bundle.js"></script>
+<script src="../util/jquery-1.11.1.js"></script>
+<script>
+function sendGet() {
+    $.get('/app/test/say',function (e) {
+        alert(e);
+    });
+}
+
+</script>
+
+</body>
+</html>
