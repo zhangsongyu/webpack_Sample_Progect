@@ -8,9 +8,13 @@ document.getElementById('root').appendChild(greeter());
 */
 
 //react
-import React from 'react';
+/*import React from 'react';
 import {render} from 'react-dom';
-import Greeter from './Greeter';
+import Greeter from './Greeter';*/
+var $ = require('jquery');
+window.jQuery = $;
+
+require('bootstrap');
 import './css/main.css';//使用require导入css文件
 
 var Hello = require('./hello');
