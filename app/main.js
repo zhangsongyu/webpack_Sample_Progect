@@ -19,4 +19,4 @@ hello.setName('BYVoid');
 hello.sayHello();
 hello.sayGoodbye();
 
-render(<Greeter />, document.getElementById('root'));
+//页面渲染render(<Greeter />, document.getElementById('root'));

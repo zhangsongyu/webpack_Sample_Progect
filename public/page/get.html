@@ -8,17 +8,23 @@
 <body>
 <div id='root'>
 </div>
-<button onclick="sendGet()">GET</button>
+<button onclick="sendGet()">sendGET</button>
+<button onclick="getCookie()">getCookie</button>
 
 <script src="../bundle.js"></script>
 <script src="../util/jquery-1.11.1.js"></script>
 <script>
 function sendGet() {
     $.get('/app/test/say',function (e) {
-        alert(e);
+        console.log(e);
     });
 }
 
+function getCookie() {
+    $.get('/app/test/getCookie',function (e) {
+        console.log(e);
+    });
+}
 </script>
 
 </body>
